@@ -1,0 +1,196 @@
+---
+title: "Available React Components"
+description: "Documentation for React components that can be used in Theorym content"
+---
+
+# Available React Components
+
+This document provides an overview of the React components available for use in Theorym content. For a live demonstration of these components, visit [ui.theorym.org](https://ui.theorym.org).
+
+## How to Import Components
+
+At the top of your MDX file, import the components you need:
+
+```jsx
+import { Callout } from '@/components/ui/callout'
+import { Steps } from '@/components/ui/steps'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+```
+
+## Basic Components
+
+### Callout
+
+```jsx
+<Callout type="info">
+  This is an informational callout.
+</Callout>
+
+<Callout type="warning">
+  This is a warning callout.
+</Callout>
+
+<Callout type="error">
+  This is an error callout.
+</Callout>
+
+<Callout type="tip">
+  This is a tip callout.
+</Callout>
+```
+
+### Tabs
+
+```jsx
+<Tabs defaultValue="tab1">
+  <TabsList>
+    <TabsTrigger value="tab1">Tab 1</TabsTrigger>
+    <TabsTrigger value="tab2">Tab 2</TabsTrigger>
+  </TabsList>
+  <TabsContent value="tab1">
+    Content for tab 1
+  </TabsContent>
+  <TabsContent value="tab2">
+    Content for tab 2
+  </TabsContent>
+</Tabs>
+```
+
+### Steps
+
+```jsx
+<Steps>
+  <Step>First step in a process</Step>
+  <Step>Second step in a process</Step>
+  <Step>Final step in a process</Step>
+</Steps>
+```
+
+## Mathematical Components
+
+### Theorem
+
+```jsx
+<Theorem name="Pythagorean Theorem">
+  In a right triangle, the square of the length of the hypotenuse equals the sum of the squares of the lengths of the other two sides.
+  
+  $$a^2 + b^2 = c^2$$
+</Theorem>
+```
+
+### Proof
+
+```jsx
+<Proof>
+  Let's prove that $\sqrt{2}$ is irrational.
+  
+  Assume, for contradiction, that $\sqrt{2}$ is rational. Then $\sqrt{2} = \frac{p}{q}$ where $p$ and $q$ are integers with no common factors.
+  
+  Therefore, $2 = \frac{p^2}{q^2}$, which means $p^2 = 2q^2$.
+  
+  This means $p^2$ is even, which means $p$ is even.
+  
+  So $p = 2k$ for some integer $k$.
+  
+  Substituting, we get $4k^2 = 2q^2$, which means $q^2 = 2k^2$.
+  
+  This means $q^2$ is even, which means $q$ is even.
+  
+  But this contradicts our assumption that $p$ and $q$ have no common factors.
+  
+  Therefore, $\sqrt{2}$ is irrational.
+</Proof>
+```
+
+### Definition
+
+```jsx
+<Definition term="Vector">
+  A quantity having direction as well as magnitude, especially as determining the position of one point in space relative to another.
+</Definition>
+```
+
+## Interactive Components
+
+### Quiz
+
+```jsx
+<Quiz>
+  <Question>
+    <QuestionText>
+      What is the derivative of $f(x) = x^2$?
+    </QuestionText>
+    <QuestionOptions>
+      <Option correct>$f'(x) = 2x$</Option>
+      <Option>$f'(x) = x^2$</Option>
+      <Option>$f'(x) = 2$</Option>
+      <Option>$f'(x) = x$</Option>
+    </QuestionOptions>
+    <Explanation>
+      The derivative of $x^n$ is $nx^{n-1}$. So for $x^2$, the derivative is $2x^{2-1} = 2x$.
+    </Explanation>
+  </Question>
+</Quiz>
+```
+
+### Interactive Graph
+
+```jsx
+<InteractiveGraph
+  function="x^2"
+  xRange={[-10, 10]}
+  yRange={[-10, 100]}
+  gridLines={true}
+/>
+```
+
+### Code Block
+
+```jsx
+<CodeBlock
+  language="python"
+  showLineNumbers={true}
+  highlightLines={[3, 4, 5]}
+>
+{`def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))  # Output: 120`}
+</CodeBlock>
+```
+
+## Layout Components
+
+### Card
+
+```jsx
+<Card>
+  <CardHeader>
+    <CardTitle>Card Title</CardTitle>
+    <CardDescription>Card Description</CardDescription>
+  </CardHeader>
+  <CardContent>
+    This is the main content of the card.
+  </CardContent>
+  <CardFooter>
+    <Button>Learn More</Button>
+  </CardFooter>
+</Card>
+```
+
+### Grid
+
+```jsx
+<Grid columns={3}>
+  <GridItem>First item</GridItem>
+  <GridItem>Second item</GridItem>
+  <GridItem>Third item</GridItem>
+</Grid>
+```
+
+## Note
+
+This is not an exhaustive list of all available components. New components are regularly added to enhance the learning experience. Visit [ui.theorym.org](https://ui.theorym.org) for the most up-to-date list of components and live examples. 
