@@ -119,7 +119,9 @@ import { Brachistochrone } from "@/components/simulators/physics/Brachistochrone
 import { GasProperties } from "@/components/simulators/physics/GasProperties"
 import { ParticlesInABox } from "@/components/simulators/physics/ParticlesInABox"
 import { WaveInterference } from "@/components/simulators/physics/WaveInterference"
+
 import { EquationCard } from "@/components/simulators/EquationCard"
+import { EquationCalculatorCard } from "@/components/simulators/EquationCalculatorCard"
 import { GraphCard } from "@/components/simulators/GraphCard"
 import { QuizCard } from "@/components/simulators/QuizCard"
 
@@ -150,9 +152,19 @@ The set of all permutations of $n$ elements forms the symmetric group $S_n$ unde
 
 ## Interactive Learning Tools
 
-### 1. Group Order Calculator
+### 1. Equation
 
 <EquationCard
+  title="Group Axioms"
+  description="The four group axioms"
+  equation="G = (G, \star)"
+  equationUnit="G = (G, \star)"
+/>
+
+
+### 2. Group Order Calculator
+
+<EquationCalculatorCard
   title="Newton's Gravitational Force"
   description="Calculate the gravitational force between two masses using Newton's law of universal gravitation"
   equation="F = G \frac{m_1 m_2}{r^2}"
@@ -173,7 +185,7 @@ The set of all permutations of $n$ elements forms the symmetric group $S_n$ unde
   resultUnit="N"
 />
 
-### 2. Group Operation Visualization
+### 3. Group Operation Visualization
 
 <GraphCard
   title="Group Operation Graph"
@@ -191,7 +203,7 @@ The set of all permutations of $n$ elements forms the symmetric group $S_n$ unde
   yMax={5}
 />
 
-### 3. Group Theory Quiz
+### 4. Group Theory Quiz
 
 <QuizCard
   title="Group Theory Fundamentals Quiz"
