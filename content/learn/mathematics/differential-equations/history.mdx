@@ -3,6 +3,9 @@ title: "History"
 description: "The genesis and axioms of differential equations"
 ---
 
+import { EquationCard } from "@/components/simulators/EquationCard"
+
+
 # The Language of Change: A Journey Through the History of Differential Equations
 
 ## Introduction: The Language of Change
@@ -53,7 +56,7 @@ The subsequent, bitter priority dispute between the followers of Newton and Leib
 |------------|---------------|---------------------------|-------------------------------|
 | **Antiquity** | Archimedes (c. 287-212 BCE) | Areas and Volumes (Quadrature) | Method of Exhaustion; rigorous precursor to integration. |
 | **17th Century** | Isaac Newton (1643-1727) | Motion, Gravity, Planetary Orbits | Invention of Calculus (Fluxions); Fundamental Theorem; First "fluxional equations." |
-| | Gottfried Leibniz (1646-1716) | Logic, Geometry, Tangent Problem | Independent invention of Calculus; Superior notation ($\frac{dy}{dx}$, ∫); Formalized rules. |
+| | Gottfried Leibniz (1646-1716) | Logic, Geometry, Tangent Problem | Independent invention of Calculus; Superior notation ($\frac{dy}{dx}$, $\int$); Formalized rules. |
 | **Early 18th C.** | Bernoulli Brothers (Jacob & Johann) | Catenary, Brachistochrone | Application of calculus to new mechanics problems; Birth of Calculus of Variations. |
 | **Mid 18th C.** | Leonhard Euler (1707-1783) | Systematization of Calculus | Vast toolkit of solution methods (e.g., integrating factors); Euler-Lagrange Equation. |
 | | Jean d'Alembert (1717-1783) | Vibrating String | Formulation and solution of the one-dimensional Wave Equation (first PDE). |
@@ -72,17 +75,23 @@ The "why" was the grand challenge that Isaac Newton set out to solve, and his so
 
 The Second Law states that the force acting on an object is equal to its mass times its acceleration. In vector form, using Newton's own fluxional calculus (or modern notation), this is:
 
-$$\mathbf{F} = m\mathbf{a}$$
+<EquationCard 
+  equation="\mathbf{F} = m\mathbf{a}"
+>
 
 where the acceleration is the second time derivative of the position vector $\mathbf{r}(t)$. 
 
 The Law of Universal Gravitation states that the force of attraction between two bodies is proportional to the product of their masses and inversely proportional to the square of the distance between them. For a planet orbiting the Sun, this force vector can be written as:
 
-$$\mathbf{F} = -\frac{GMm}{r^3} \mathbf{r}$$
+<EquationCard 
+  equation="\mathbf{F} = -\frac{GMm}{r^3} \mathbf{r}"
+>
 
 Newton's masterstroke was to equate these two expressions for force. The force causing the acceleration is the force of gravity. This simple act of setting them equal yielded a single vector differential equation:
 
-$$\mathbf{a} = -\frac{GM}{r^3} \mathbf{r}$$
+<EquationCard 
+  equation="\mathbf{a} = -\frac{GM}{r^3} \mathbf{r}"
+>
 
 This equation is the local rule. It says nothing directly about ellipses or periods. It simply dictates the planet's acceleration at any given instant, based on its position at that instant. The grand challenge was to see if the global story of Kepler's laws would unfold from this one local rule.
 
@@ -118,11 +127,15 @@ The first great challenges of this new frontier were the vibrating string, the f
 
 The problem of describing the motion of a musical instrument string had intrigued mathematicians for decades. In 1747, the French mathematician Jean le Rond d'Alembert made a decisive breakthrough. By applying Newton's second law to an infinitesimal segment of the string, he derived what is now known as the one-dimensional wave equation, arguably the first PDE ever written:
 
-$$\frac{\partial^2 u}{\partial t^2} = a^2 \frac{\partial^2 u}{\partial x^2}$$
+<EquationCard 
+  equation="\frac{\partial^2 u}{\partial t^2} = a^2 \frac{\partial^2 u}{\partial x^2}"
+>
 
 Here, u(x,t) represents the vertical displacement of the string at position x and time t. D'Alembert did more than just formulate the equation; he found its beautifully simple general solution:
 
-$$u(x,t) = F(x+at) + G(x-at)$$
+<EquationCard 
+  equation="u(x,t) = F(x+at) + G(x-at)"
+>
 
 This elegant result revealed a profound physical truth: any vibration of the string, no matter how complex, is simply the superposition of two waves, F and G, traveling in opposite directions with speed a.
 
@@ -130,7 +143,9 @@ This elegant result revealed a profound physical truth: any vibration of the str
 
 In 1822, Joseph Fourier published his monumental work, *Théorie analytique de la chaleur* (The Analytic Theory of Heat), in which he sought to create a complete mathematical theory of heat conduction. He began with an empirical observation, now known as Fourier's Law: the rate of heat flow through a material is proportional to the negative of the temperature gradient. From this, he derived the heat equation (also known as the diffusion equation):
 
-$$\frac{\partial u}{\partial t} = \kappa \frac{\partial^2 u}{\partial x^2}$$
+<EquationCard 
+  equation="\frac{\partial u}{\partial t} = \kappa \frac{\partial^2 u}{\partial x^2}"
+>
 
 where $u(x,t)$ is the temperature and $\kappa$ is the thermal diffusivity of the material.
 
@@ -140,7 +155,9 @@ To solve this equation for a given initial temperature distribution, Fourier int
 
 Working in the late 18th and early 19th centuries, Pierre-Simon Laplace made profound contributions to celestial mechanics and the study of gravitational and electrostatic forces. He developed the concept of the "potential," a scalar function whose gradient gives the force field. He showed that in regions of space free of mass or electric charge, this potential function $\phi$ must satisfy a simple yet fundamental PDE known as Laplace's equation:
 
-$$\nabla^2\phi = \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} + \frac{\partial^2\phi}{\partial z^2} = 0$$
+<EquationCard 
+  equation="\nabla^2\phi = \frac{\partial^2\phi}{\partial x^2} + \frac{\partial^2\phi}{\partial y^2} + \frac{\partial^2\phi}{\partial z^2} = 0"
+>
 
 This equation describes steady-state or equilibrium situations—systems that have settled and are no longer changing in time. Its solutions, called harmonic functions, are cornerstones of physics, appearing everywhere from electrostatics and gravity to fluid dynamics and steady-state heat flow.
 
